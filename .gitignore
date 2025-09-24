@@ -27,6 +27,7 @@ __pycache__/
 logs/
 *.log
 
-# --- Build/artifacts (if you add later) ---
+# --- Build/artifacts ---
 dist/
 build/
+
