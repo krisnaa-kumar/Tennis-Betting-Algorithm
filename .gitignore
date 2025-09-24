@@ -1,0 +1,32 @@
+# --- data (keep big files out of Git) ---
+data/
+!data/.gitkeep
+!data/README.md
+
+# --- Python env/build cruft ---
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.pyd
+*.so
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Env/secrets ---
+.env
+*.env
+
+# --- Editors/OS ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Build/artifacts (if you add later) ---
+dist/
+build/
