@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16
+    container_name: tennis_pg
+    environment:
+      POSTGRES_USER: tennis
+      POSTGRES_PASSWORD: tennis
+      POSTGRES_DB: tennis
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: tennis_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports: ["8080:80"]
+    depends_on: [db]
+volumes:
+  pgdata:
